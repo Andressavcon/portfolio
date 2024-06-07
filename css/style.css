@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css?family=Prociono:700|Prociono:400');
+
+:root[data-theme='light'] {
+  --text: rgb(10, 29, 31);
+  --background: rgb(244, 251, 251);
+  --primary: rgb(34, 101, 109);
+  --secondary: rgb(216, 131, 185);
+  --accent: rgb(155, 61, 49);
+}
+:root[data-theme='dark'] {
+  --text: rgb(224, 243, 245);
+  --background: rgb(4, 11, 11);
+  --primary: rgb(146, 213, 221);
+  --secondary: rgb(124, 39, 93);
+  --accent: rgb(206, 112, 100);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  font-family: 'Prociono';
+  font-weight: 400;
+
+  background-color: var(--background);
+  color: var(--text);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+i {
+  color: var(--text);
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Prociono';
+  font-weight: 700;
+}
+
+html {
+  font-size: 100%; /* 16px */
+}
+
+h1 {
+  font-size: 4.21rem; /* 67.36px */
+}
+
+h2 {
+  font-size: 3.158rem; /* 50.56px */
+}
+
+h3 {
+  font-size: 2.369rem; /* 37.92px */
+}
+
+h4 {
+  font-size: 1.777rem; /* 28.48px */
+}
+
+h5 {
+  font-size: 1.333rem; /* 21.28px */
+}
+
+small {
+  font-size: 0.75rem; /* 12px */
+}
+
+.container {
+  width: 61.25rem; /* 980px */
+  margin: 0 auto;
+}
+
+.header {
+  width: 100%;
+  height: 5rem;
+}
+
+.nav {
+  height: 100%;
+  padding: 2rem 0;
+}
+
+.nav__items li {
+  float: left;
+  padding: 0 1rem;
+}
+
+#theme-toggle {
+  float: right;
+  padding-right: 1rem;
+}
+
+main {
+  background: var(--primary);
+}
