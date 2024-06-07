@@ -2,13 +2,16 @@
 
 :root[data-theme='light'] {
   --text: rgb(10, 29, 31);
+  --border: rgba(10, 29, 31, 0.2);
   --background: rgb(244, 251, 251);
   --primary: rgb(34, 101, 109);
   --secondary: rgb(216, 131, 185);
   --accent: rgb(155, 61, 49);
 }
+
 :root[data-theme='dark'] {
   --text: rgb(224, 243, 245);
+  --border: rgba(224, 243, 245, 0.2);
   --background: rgb(4, 11, 11);
   --primary: rgb(146, 213, 221);
   --secondary: rgb(124, 39, 93);
@@ -98,19 +101,65 @@ small {
 
 .nav {
   height: 100%;
-  padding: 2rem 0;
+  padding: 1.75rem 0;
+
+  border-bottom: 1px solid var(--border);
 }
 
 .nav__items li {
   float: left;
-  padding: 0 1rem;
+  padding: 0.2rem 1rem;
+}
+
+.nav__items li:hover {
+  color: var(--secondary);
 }
 
 #theme-toggle {
   float: right;
   padding-right: 1rem;
+  font-size: 1.5rem;
 }
 
-main {
-  background: var(--primary);
+#theme-toggle:hover i {
+  color: var(--secondary);
+}
+
+.description {
+  margin-top: 5rem;
+  height: 70vh;
+}
+
+.description__content {
+  width: 60%;
+  height: 50vh;
+  float: left;
+  padding-top: 7rem;
+}
+.description__image {
+  width: 300px;
+  height: 300px;
+  float: right;
+
+  position: relative;
+  top: 3rem;
+  right: 5rem;
+
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: var(--secondary);
+}
+
+.description__image img {
+  width: 70%;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 65%;
+  transform: translate(-50%, -50%);
+  transition: transform 0.8s ease;
+}
+
+.description__image img:hover {
+  transform: translate(-50%, -50%) scale(1.1);
 }
