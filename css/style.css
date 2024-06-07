@@ -127,7 +127,7 @@ small {
 
 .description {
   margin-top: 5rem;
-  height: 70vh;
+  height: 65vh;
 }
 
 .description__content {
@@ -162,4 +162,49 @@ small {
 
 .description__image img:hover {
   transform: translate(-50%, -50%) scale(1.1);
+}
+
+.skills {
+  margin-top: 5rem;
+}
+
+.skills__title {
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.skills__title h4 {
+  display: inline-block;
+  margin-left: 0.5rem;
+  vertical-align: middle;
+}
+
+.skills__title i {
+  font-size: 1.777rem;
+  vertical-align: middle;
+}
+
+.skills__items {
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.skills__items .card {
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  border-radius: 50%;
+  background-color: var(--secondary);
+  margin: 0.5rem;
+  vertical-align: middle;
+  transition: transform 0.3s ease;
+}
+
+.skills__items .card:hover {
+  transform: scale(1.1);
+}
+
+.skills__items a i {
+  font-size: 4rem;
+  line-height: 100px;
 }
