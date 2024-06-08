@@ -28,7 +28,6 @@
 body {
   font-family: 'Prociono';
   font-weight: 400;
-
   background-color: var(--background);
   color: var(--text);
 }
@@ -102,7 +101,6 @@ small {
 .nav {
   height: 100%;
   padding: 1.75rem 0;
-
   border-bottom: 1px solid var(--border);
 }
 
@@ -136,32 +134,34 @@ small {
   float: left;
   padding-top: 7rem;
 }
+
 .description__image {
-  width: 300px;
-  height: 300px;
+  width: 500px;
+  height: 500px;
   float: right;
-
-  position: relative;
-  top: 3rem;
-  right: 5rem;
-
-  border-radius: 50%;
-  overflow: hidden;
+  position: absolute;
+  top: 8rem;
+  right: 14rem;
   background-color: var(--secondary);
+  clip-path: path(
+    'M425,279.5Q416,319,379,336Q342,353,323,395.5Q304,438,261,445Q218,452,179.5,431.5Q141,411,130.5,369Q120,327,80.5,304.5Q41,282,78.5,248Q116,214,94,166Q72,118,98,78.5Q124,39,171.5,38.5Q219,38,265.5,28.5Q312,19,334.5,64.5Q357,110,370,143Q383,176,408.5,208Q434,240,425,279.5Z'
+  );
+  overflow: hidden;
 }
 
 .description__image img {
-  width: 70%;
-  height: auto;
-  position: absolute;
-  top: 50%;
-  left: 65%;
-  transform: translate(-50%, -50%);
+  width: auto;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+  top: 1rem;
+  left: 7rem;
+  transform: scale(0.8);
   transition: transform 0.8s ease;
 }
 
 .description__image img:hover {
-  transform: translate(-50%, -50%) scale(1.1);
+  transform: scale(0.85);
 }
 
 .skills {
@@ -185,19 +185,21 @@ small {
 }
 
 .skills__items {
-  padding: 2rem 0;
   text-align: center;
+  padding: 2rem 0;
+  margin-bottom: 7rem;
 }
 
 .skills__items .card {
   width: 100px;
   height: 100px;
   display: inline-block;
-  border-radius: 50%;
+  border-radius: 10%;
   background-color: var(--secondary);
-  margin: 0.5rem;
+  margin: 1rem;
   vertical-align: middle;
-  transition: transform 0.3s ease;
+  transition: transform 0.6s ease;
+  box-shadow: 0 0 8px -3.5px var(--accent);
 }
 
 .skills__items .card:hover {
@@ -207,4 +209,16 @@ small {
 .skills__items a i {
   font-size: 4rem;
   line-height: 100px;
+}
+
+.arrow {
+  position: fixed;
+  bottom: 1rem;
+  right: 2rem;
+  font-size: 2.369rem;
+  opacity: 0.5;
+}
+
+.arrow:hover {
+  opacity: 1;
 }
