@@ -7,8 +7,6 @@
   --primary: rgb(34, 101, 109);
   --secondary: rgb(216, 131, 185);
   --accent: rgb(155, 61, 49);
-  --frontend-color: rgb(76, 175, 80);
-  --backend-color: rgb(33, 150, 243);
 }
 
 :root[data-theme='dark'] {
@@ -18,8 +16,6 @@
   --primary: rgb(146, 213, 221);
   --secondary: rgb(124, 39, 93);
   --accent: rgb(206, 112, 100);
-  --frontend-color: rgb(139, 195, 74);
-  --backend-color: rgb(30, 136, 229);
 }
 
 * {
@@ -192,6 +188,7 @@ small {
 .contact__title {
   display: inline-block;
   margin-bottom: 1rem;
+  margin-top: 2rem;
 }
 
 .skills__title h4,
@@ -294,6 +291,75 @@ small {
   color: var(--background);
 }
 
+.contact__content {
+  overflow: hidden;
+  margin: 2rem 0 4rem;
+}
+
+.contact__form {
+  float: left;
+  width: calc(50% - 10px);
+  margin-right: 20px;
+  margin-bottom: 40px;
+}
+
+.contact__form .form-group {
+  margin-bottom: 1.5rem;
+}
+
+.contact__form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: var(--text);
+}
+
+.contact__form input,
+.contact__form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  font-size: 1rem;
+  color: var(--text);
+  background-color: var(--background);
+}
+
+.contact__form input:focus,
+.contact__form textarea:focus {
+  border-color: var(--primary);
+  outline: none;
+}
+
+.contact__form button {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.25rem;
+  color: var(--background);
+  background-color: var(--primary);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact__form button:hover {
+  background-color: var(--secondary);
+}
+
+.contact__image {
+  margin-top: 30px;
+  float: left;
+  width: calc(50% - 10px);
+}
+
+.contact__image img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
 .arrow {
   position: fixed;
   bottom: 1rem;
@@ -304,4 +370,13 @@ small {
 
 .arrow:hover {
   opacity: 1;
+}
+
+footer {
+  background-color: var(--background);
+  color: var(--text);
+  margin-top: 7rem;
+  padding: 2rem 0;
+  text-align: center;
+  border-top: 1px solid var(--border);
 }
