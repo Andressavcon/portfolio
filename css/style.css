@@ -7,6 +7,8 @@
   --primary: rgb(34, 101, 109);
   --secondary: rgb(216, 131, 185);
   --accent: rgb(155, 61, 49);
+  --frontend-color: rgb(76, 175, 80);
+  --backend-color: rgb(33, 150, 243);
 }
 
 :root[data-theme='dark'] {
@@ -16,6 +18,8 @@
   --primary: rgb(146, 213, 221);
   --secondary: rgb(124, 39, 93);
   --accent: rgb(206, 112, 100);
+  --frontend-color: rgb(139, 195, 74);
+  --backend-color: rgb(30, 136, 229);
 }
 
 * {
@@ -135,6 +139,19 @@ small {
   padding-top: 7rem;
 }
 
+.social {
+  height: 4rem;
+}
+
+.social i {
+  font-size: 1.777rem;
+  padding: 2rem 0.8rem;
+}
+
+.social i:hover {
+  color: var(--secondary);
+}
+
 .description__image {
   width: 500px;
   height: 500px;
@@ -164,22 +181,30 @@ small {
   transform: scale(0.85);
 }
 
-.skills {
+.skills,
+.projects,
+.contact {
   margin-top: 5rem;
 }
 
-.skills__title {
+.skills__title,
+.projects__title,
+.contact__title {
   display: inline-block;
   margin-bottom: 1rem;
 }
 
-.skills__title h4 {
+.skills__title h4,
+.projects__title h4,
+.contact__title h4 {
   display: inline-block;
   margin-left: 0.5rem;
   vertical-align: middle;
 }
 
-.skills__title i {
+.skills__title i,
+.projects__title i,
+.contact__title i {
   font-size: 1.777rem;
   vertical-align: middle;
 }
@@ -209,6 +234,64 @@ small {
 .skills__items a i {
   font-size: 4rem;
   line-height: 100px;
+}
+
+.projects__items {
+  text-align: center;
+  padding: 2rem 0;
+  margin-bottom: 7rem;
+}
+
+.projects__items .card {
+  position: relative;
+  width: 280px;
+  height: 150px;
+  display: inline-block;
+  border-radius: 5%;
+  background-color: var(--secondary);
+  margin: 1rem;
+  vertical-align: top;
+  transition: transform 0.6s ease;
+  box-shadow: 0 0 8px -3.5px var(--accent);
+}
+
+.projects__items .card::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: var(--primary);
+}
+
+.projects__items .card.backend::before {
+  background-color: var(--accent);
+}
+
+.projects__items .card:hover {
+  transform: scale(1.1);
+}
+
+.projects__items .card a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  height: 100%;
+  text-align: center;
+}
+
+.projects__items .card h5 {
+  padding: 0 2rem;
+  font-size: 1.5rem;
+  margin-top: 3rem;
+  color: var(--text);
+}
+
+.projects__items .card span {
+  font-size: 1rem;
+  color: var(--background);
 }
 
 .arrow {
