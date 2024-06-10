@@ -123,18 +123,6 @@ small {
   color: var(--secondary);
 }
 
-.description {
-  margin-top: 5rem;
-  height: 65vh;
-}
-
-.description__content {
-  width: 60%;
-  height: 50vh;
-  float: left;
-  padding-top: 7rem;
-}
-
 .social {
   height: 4rem;
 }
@@ -148,13 +136,24 @@ small {
   color: var(--secondary);
 }
 
+.description {
+  margin-top: 5rem;
+  height: 65vh;
+  position: relative;
+}
+
+.description__content {
+  width: 45%;
+  height: 50vh;
+  float: left;
+  padding-top: 7rem;
+}
+
 .description__image {
   width: 500px;
   height: 500px;
   float: right;
-  position: absolute;
-  top: 8rem;
-  right: 14rem;
+  position: relative;
   background-color: var(--secondary);
   clip-path: path(
     'M425,279.5Q416,319,379,336Q342,353,323,395.5Q304,438,261,445Q218,452,179.5,431.5Q141,411,130.5,369Q120,327,80.5,304.5Q41,282,78.5,248Q116,214,94,166Q72,118,98,78.5Q124,39,171.5,38.5Q219,38,265.5,28.5Q312,19,334.5,64.5Q357,110,370,143Q383,176,408.5,208Q434,240,425,279.5Z'
@@ -379,4 +378,52 @@ footer {
   padding: 2rem 0;
   text-align: center;
   border-top: 1px solid var(--border);
+}
+
+@media screen and (max-width: 800px) {
+  .container {
+    width: 90%;
+    max-width: 100%;
+  }
+
+  .description__content {
+    width: 100%;
+    float: none;
+    padding-top: 2rem;
+    text-align: center;
+  }
+
+  .social {
+    padding-top: 2rem;
+  }
+
+  .description__image {
+    display: none;
+  }
+
+  .skills__items .card {
+    width: 80px;
+    height: 80px;
+  }
+
+  .projects__items .card {
+    width: 100%;
+    margin: 1rem 0;
+  }
+
+  .skills__items a i,
+  .projects__items .card::before {
+    font-size: 2rem;
+  }
+
+  .contact__form,
+  .contact__image {
+    width: 100%;
+    margin: 0;
+    float: none;
+  }
+
+  .contact__form {
+    margin-bottom: 2rem;
+  }
 }
