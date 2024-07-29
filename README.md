@@ -1,6 +1,6 @@
 ![Logo](./assets/img.png)
 
-# Tarefa #03 - Portfólio 💡
+# Tarefa #03 e #04 - Portfólio 💡
 
 Este repositório contém Landing page simples utilizando HTML, CSS e JavaScript, da Formação Dev Full Stack Junior da [+prati](https://www.maisprati.com.br/) e [codifica](https://www.codificaedu.com.br/).
 
@@ -8,4 +8,4 @@ Este repositório contém Landing page simples utilizando HTML, CSS e JavaScript
 <br><br>
 [Link aplicação](https://andressavcon.github.io/portfolio/)
 
-\*\*obs: feito sem Flexbox e sem responsividade
+\*\*OBS: parte 04 com inclusão de flexbox, responsividade, requisições e localStorage
