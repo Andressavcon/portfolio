@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfólio</title>
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -13,6 +13,10 @@
       rel="stylesheet"
       type="text/css"
       href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Prociono:700|Prociono:400"
+      rel="stylesheet"
     />
   </head>
   <body>
@@ -23,6 +27,7 @@
           <li><a href="#skills">Skills</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
+          <li><a href="#favorites-section">Favorites</a></li>
         </ul>
         <button id="theme-toggle">
           <i id="light-icon" class="fas fa-lightbulb" style="display: none"></i>
@@ -32,6 +37,9 @@
     </header>
     <main>
       <section class="description container">
+        <div class="description__image">
+          <img src="./assets/andressa.png" alt="image-andressa" />
+        </div>
         <div class="description__content">
           <h5>Hello, my name is</h5>
           <h2>Andressa Vargas Conrado</h2>
@@ -47,9 +55,6 @@
               ><i class="fa-brands fa-instagram"></i
             ></a>
           </div>
-        </div>
-        <div class="description__image">
-          <img src="./assets/andressa.png" alt="image-andressa" />
         </div>
       </section>
 
@@ -111,59 +116,26 @@
           <h4>Projects</h4>
         </div>
 
-        <div class="projects__items">
-          <div class="card frontend">
-            <a href="https://github.com/Andressavcon/dogs" target="_blank">
-              <h5>Dogs</h5>
-              <span>Front-end</span>
-            </a>
-          </div>
-          <div class="card backend">
-            <a
-              href="https://github.com/Andressavcon/api-catalogo-filmes-orm"
-              target="_blank"
-            >
-              <h5>API RESTful Catálogo de Filmes</h5>
-              <span>Backend</span>
-            </a>
-          </div>
-          <div class="card frontend">
-            <a
-              href="https://github.com/Andressavcon/calculadora"
-              target="_blank"
-            >
-              <h5>Calculadora</h5>
-              <span>Front-end</span>
-            </a>
-          </div>
-          <div class="card frontend">
-            <a
-              href="https://github.com/Andressavcon/daily-front-challenges"
-              target="_blank"
-            >
-              <h5>Challenges Front</h5>
-              <span>Front-end</span>
-            </a>
-          </div>
-          <div class="card backend">
-            <a
-              href="https://github.com/Andressavcon/projeto-modulo-03-cubos-academy"
-              target="_blank"
-            >
-              <h5>RESTful API - M3 Cubos</h5>
-              <span>Backend</span>
-            </a>
-          </div>
-          <div class="card backend">
-            <a
-              href="https://github.com/Andressavcon/projeto-modulo-02-cubos-academy"
-              target="_blank"
-            >
-              <h5>RESTful API - M2 Cubos</h5>
-              <span>Backend</span>
-            </a>
-          </div>
+        <div id="projects-list" class="projects__items"></div>
+
+        <div id="pagination-controls" class="pagination-controls">
+          <button id="prev-page" disabled>
+            <i class="fa-solid fa-circle-chevron-left"></i>
+          </button>
+          <span id="page-info">Page 1</span>
+          <button id="next-page">
+            <i class="fa-solid fa-circle-chevron-right"></i>
+          </button>
         </div>
+      </section>
+
+      <section id="favorites-section" class="favorites-section container">
+        <div class="favorites__title">
+          <i class="fa-solid fa-heart"></i>
+          <h4>Favorites</h4>
+        </div>
+
+        <div id="favorites-list" class="favorites-list container"></div>
       </section>
 
       <section id="contact" class="contact container">
@@ -209,6 +181,6 @@
       <p>&copy; 2024 Andressa Vargas Conrado</p>
     </footer>
 
-    <script src="./js/script.js"></script>
+    <script src="/assets/js/script.js"></script>
   </body>
 </html>
